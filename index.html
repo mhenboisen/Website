@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<script>
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
+</script>
 <html>
 <head>
     <link rel = "stylesheet" href = "styles.css">
@@ -6,8 +13,8 @@
         cool ahh title
     </title>
     <div id = header>
-        <button class = 'menu-buttons'>Home</button>
-        <button class = 'menu-buttons'>About</button>
+        <button class = 'menu-buttons' onclick="topFunction()">Home</button>
+        <button class = 'menu-buttons' onclick="document.getElementById('left-div-box-2').scrollIntoView();">About</button>
         <button class = 'menu-buttons'>Store</button>
         <h1>
         Glow Goddess
@@ -21,7 +28,7 @@
 <body>
     <div class = 'center-align-row'>
         <div id = 'left'>
-            <div id = 'left-div-box'>
+            <div id = 'left-div-box-1'>
                     <div class = 'center-align-column'>
                         <p id = 'text-1'>Glow Goddess</p>
                         <p id = 'text-2'>Where natural beauty shines</p>
@@ -30,6 +37,14 @@
                         <button id = 'button-1'>Our products</button>
                         <button id = 'button-2'>Join our community</button>
                     </div>
+            </div>
+            <div id="left-div-box-2">
+                <p id="text-3">This some information about this website</p>
+                <ul>
+                    <p class="p1">This is one service you can get on this website</p>
+                    <p class="p1">This is another</p>
+                    <p class="p1">This is the last service available</p>
+                </ul>
             </div>
 
         </div>
@@ -43,6 +58,7 @@
                     width = "540px"> 
                 <source src="website_video.mp4" type = "video/mp4">
             </video>
+            <img id="the-image" src="Expert_Nail_Technician.jpg">
         </div>
     </div>
 </body>
